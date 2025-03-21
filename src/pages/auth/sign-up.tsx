@@ -45,7 +45,7 @@ export function SignUp() {
 
   return (
     <>
-      <SuperSEO title="Cadastro | shop-manager" description="Sign-up page" />
+      <SuperSEO title="Sign-up | shop-manager" description="Sign-up page" />
       <div className="p-8 ">
         <Button variant="secondary" asChild className="absolute top-8 right-8">
           <Link to="/sign-in">Fazer login</Link>

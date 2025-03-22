@@ -1,5 +1,6 @@
 import { SuperSEO } from 'react-super-seo'
 
+import { Pagination } from '@/components/pagination'
 import {
   Table,
   TableBody,
@@ -38,12 +39,13 @@ export function Orders() {
             </TableHeader>
 
             <TableBody>
-              {Array.from({ length: 15 }).map((_, i) => {
+              {Array.from({ length: 80 }).map((_, i) => {
                 return <OrdersTableRow key={i} />
               })}
             </TableBody>
           </Table>
         </div>
+        <Pagination perPage={15} totalCount={80} pageIndex={0} />
       </div>
     </>
   )

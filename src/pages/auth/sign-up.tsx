@@ -1,7 +1,6 @@
 import { Label } from '@radix-ui/react-label'
 import { useForm } from 'react-hook-form'
 import { Link, useNavigate } from 'react-router'
-import { SuperSEO } from 'react-super-seo'
 import { toast } from 'sonner'
 import { z } from 'zod'
 
@@ -45,9 +44,12 @@ export function SignUp() {
 
   return (
     <>
-      <SuperSEO title="Sign-up | shop-manager" description="Sign-up page" />
+      <head>
+        <title>Sign-up | shop-manager</title>
+        <link rel="icon" type="image/svg+xml" href="/store.svg" />
+      </head>
       <div className="p-8 ">
-        <Button variant="secondary" asChild className="absolute top-8 right-8">
+        <Button variant="default" asChild className="absolute top-8 right-8">
           <Link to="/sign-in">Fazer login</Link>
         </Button>
 

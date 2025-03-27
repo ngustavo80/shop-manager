@@ -2,6 +2,7 @@ import { DayOrdersAmountCard } from './cards/day-orders-amount-card'
 import { MonthCanceledOrdersAmountCard } from './cards/month-canceled-orders-amount'
 import { MonthOrdersAmountCard } from './cards/month-orders-amount'
 import { MonthReceiptCard } from './cards/month-receipt-card'
+import { PopularProductsChart } from './charts/popular-products-chart'
 import { ReceiptChart } from './charts/receipt-chart'
 
 export function Dashboard() {
@@ -24,6 +25,7 @@ export function Dashboard() {
 
         <div className="grid grid-cols-9 gap-4">
           <ReceiptChart />
+          <PopularProductsChart />
         </div>
       </div>
     </>

@@ -1,5 +1,3 @@
-import { SuperSEO } from 'react-super-seo'
-
 import { Pagination } from '@/components/pagination'
 import {
   Table,
@@ -15,7 +13,10 @@ import { OrdersTableRow } from './orders-table-row'
 export function Orders() {
   return (
     <>
-      <SuperSEO title="orders | shop-manager" />
+      <head>
+        <title>Orders | shop-manager</title>
+        <link rel="icon" type="image/svg+xml" href="/store.svg" />
+      </head>
       <div className="flex flex-col gap-4">
         <h1 className="text-3xl font-bold tracking-tight">Pedidos</h1>
       </div>

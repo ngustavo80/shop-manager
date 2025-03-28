@@ -39,10 +39,7 @@ export function SignIn() {
 
   return (
     <>
-      <head>
-        <title>Login | shop-manager</title>
-        <link rel="icon" type="image/svg+xml" href="/store.svg" />
-      </head>
+      <title>Login | shop-manager</title>
 
       <div className="p-8">
         <Button variant="default" asChild className="absolute top-8 right-8">

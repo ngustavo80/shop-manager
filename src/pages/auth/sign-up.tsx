@@ -44,10 +44,8 @@ export function SignUp() {
 
   return (
     <>
-      <head>
-        <title>Sign-up | shop-manager</title>
-        <link rel="icon" type="image/svg+xml" href="/store.svg" />
-      </head>
+      <title>Sign-up | shop-manager</title>
+
       <div className="p-8 ">
         <Button variant="default" asChild className="absolute top-8 right-8">
           <Link to="/sign-in">Fazer login</Link>

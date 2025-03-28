@@ -16,7 +16,7 @@ const signUpForm = z.object({
 
 type SignUpForm = z.infer<typeof signUpForm>
 
-export function SignUp() {
+export function SignUpPage() {
   const {
     register,
     handleSubmit,

@@ -1,9 +1,11 @@
 import { Label } from '@radix-ui/react-label'
+import { useMutation } from '@tanstack/react-query'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router'
 import { toast } from 'sonner'
 import { z } from 'zod'
 
+import { SignIn } from '@/api/sign-in'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 
@@ -13,16 +15,20 @@ const signInForm = z.object({
 
 type SignInForm = z.infer<typeof signInForm>
 
-export function SignIn() {
+export function SignInPage() {
   const {
     register,
     handleSubmit,
     formState: { isSubmitting },
   } = useForm<SignInForm>()
 
+  const { mutateAsync: authenticate } = useMutation({
+    mutationFn: SignIn,
+  })
+
   async function handleSignIn(data: SignInForm) {
     try {
-      console.log(data)
+      await authenticate({ email: data.email })
 
       await new Promise((resolve) => setTimeout(resolve, 2000))
 
